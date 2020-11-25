@@ -63,7 +63,7 @@ class appWindow(QMainWindow):
             exporter = pg.exporters.ImageExporter(self.ui.imageWindow.plotItem)
             exporter.parameters()['width'] = 256
             imageId = random.randint(1, 10000000)
-            exporter.export('{}.png'.format(imageId))
+            exporter.export(fileName='{}.png'.format(imageId))
             self.loadInfoToConsole('AnimeFaces{}保存成功!'.format(imageId))
         except Exception as e:
             print(str(e))
